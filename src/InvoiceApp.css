@@ -7,4 +7,5 @@ background-image: url("https://www.transparenttextures.com/patterns/use-your-ill
 .card{
     background-color: #175e58;
     color: #fbfefc;
+    opacity: 0.9;
 }
