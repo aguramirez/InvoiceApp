@@ -10,9 +10,12 @@ export const getInvoice = () =>{
     //     suma += i.price * i.quantity;
     // })
 
-    const suma = invoice.items
-        .map( i => i.price * i.quantity)
-        .reduce((accum, curr) => accum + curr, 0); //el 0 dice que el accum empieza en 0
+    const suma = calcularTotal(invoice.items);
 
     return {...invoice, total: suma};
+}
+
+export const calcularTotal = (items) => {
+    return items.map( i => i.price * i.quantity)
+        .reduce((accum, curr) => accum + curr, 0); //el 0 dice que el accum empieza en 0
 }

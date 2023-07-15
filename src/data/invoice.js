@@ -2,17 +2,17 @@ export const invoice ={
     id: 10,
     name: 'Componentes PC',
     client:{
-        name: 'Pepe',
-        lastName: 'Doe',
+        name: 'Agustin',
+        lastName: 'Ramirez',
         address:{
-            country: 'USA',
-            city: 'Los Angeles',
-            street: 'One Street',
-            number: 12
+            country: 'Argentina',
+            city: 'Cordoba',
+            street: 'Pueyrredon',
+            number: 85
         }
     },
     company:{
-        name: 'New Egg',
+        name: 'Pirce & Pirce',
         fiscalNumber: 1234567,
     },
     items: [

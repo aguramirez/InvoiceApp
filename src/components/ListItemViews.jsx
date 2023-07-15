@@ -2,7 +2,7 @@ import { RowItemView } from "./RowItemView";
 import PropTypes from 'prop-types';
 import { TotalView } from "./TotalView";
 
-export const ListItemViews = ({ title,items, total }) => {
+export const ListItemViews = ({ title,items, total, handlerDeleteItem }) => {
 
     return (
         <>
@@ -13,12 +13,13 @@ export const ListItemViews = ({ title,items, total }) => {
                         <th>Producto</th>
                         <th>Precio</th>
                         <th>Cantidad</th>
+                        <th>Eliminar</th>
                     </tr>
                 </thead>
                 <tbody className="table-group-divider">
                     {items.map(({id, product, price, quantity}) => {
                         return (
-                            <RowItemView key={id} product={product} price={price} quantity={quantity} />
+                            <RowItemView key={id} id={id} product={product} price={price} quantity={quantity} handlerDeleteItem={handlerDeleteItem} />
                         );
                     })}
                 </tbody>
